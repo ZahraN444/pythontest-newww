@@ -3,13 +3,13 @@
 
 
 
-Documentation for accessing and setting credentials for ApiKey.
+Documentation for accessing and setting credentials for api_key.
 
 ## Auth Credentials
 
 | Name | Type | Description | Getter |
 |  --- | --- | --- | --- |
-| X-API-Key | `str` | API key for authentication | `x_api_key` |
+| api_key | `str` | - | `api_key` |
 
 
 
@@ -22,12 +22,12 @@ Documentation for accessing and setting credentials for ApiKey.
 You must provide credentials in the client as shown in the following code snippet.
 
 ```python
-from webhooksandcallbacksapi.http.auth.api_key import ApiKeyCredentials
-from webhooksandcallbacksapi.webhooksandcallbacksapi_client import WebhooksandcallbacksapiClient
+from swaggerpetstoreopenapi30.http.auth.api_key import ApiKeyCredentials
+from swaggerpetstoreopenapi30.swaggerpetstoreopenapi_30_client import Swaggerpetstoreopenapi30Client
 
-client = WebhooksandcallbacksapiClient(
+client = Swaggerpetstoreopenapi30Client(
     api_key_credentials=ApiKeyCredentials(
-        x_api_key='X-API-Key'
+        api_key='api_key'
     )
 )
 ```

@@ -6,10 +6,10 @@ The SDK client can also be initialized directly from environment variables using
 ## Example
 
 ```python
-from webhooksandcallbacksapi.webhooksandcallbacksapi_client import WebhooksandcallbacksapiClient
+from swaggerpetstoreopenapi30.swaggerpetstoreopenapi_30_client import Swaggerpetstoreopenapi30Client
 
 # Specify the path to your .env file if it’s located outside the project’s root directory.
-client = WebhooksandcallbacksapiClient.from_environment(dotenv_path='/path/to/.env')
+client = Swaggerpetstoreopenapi30Client.from_environment(dotenv_path='/path/to/.env')
 ```
 
 You can also specify a path to a `.env` file by passing it to the `from_environment()` method:
@@ -17,9 +17,9 @@ You can also specify a path to a `.env` file by passing it to the `from_environm
 The same method can accept keyword arguments to override any values read from the environment, and the arguments to override values should follow the same approach as code-based client initialization.
 
 ```python
-from webhooksandcallbacksapi.webhooksandcallbacksapi_client import WebhooksandcallbacksapiClient
+from swaggerpetstoreopenapi30.swaggerpetstoreopenapi_30_client import Swaggerpetstoreopenapi30Client
 
-client = WebhooksandcallbacksapiClient.from_environment(
+client = Swaggerpetstoreopenapi30Client.from_environment(
     dotenv_path='/path/to/.env',
     timeout=0,  # overrides timeout from environment variable
 )
@@ -32,8 +32,10 @@ Values provided through arguments take precedence over those defined in environm
 ```python
 ENVIRONMENT=production
 
-API_KEY_X_API_KEY=ExampleXAPIKey
-BEARER_AUTH_ACCESS_TOKEN=ExampleAccessToken
+PETSTORE_AUTH_OAUTH_CLIENT_ID=ExampleOauthClientId
+PETSTORE_AUTH_OAUTH_REDIRECT_URI=ExampleOauthRedirectUri
+PETSTORE_AUTH_OAUTH_SCOPES=ExampleOauthScopes
+API_KEY_API_KEY=ExampleApiKey
 
 TIMEOUT=60
 MAX_RETRIES=3
